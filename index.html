@@ -9,7 +9,31 @@
   <link rel="stylesheet" href="./Huating Wang Lab - Home_files/main.css">
   <!--<link rel="canonical" href="https://www.vanvalen.caltech.edu/">-->
 <link rel="shortcut icon" type="image/x-icon" href="https://cuhkwanglab.github.io/images/favicon.ico">
+  <style>
+  .well-wrapper {
+    position: relative; /* This becomes the reference for absolute positioning */
+    overflow: visible;  /* Allow content to overflow outside the box */
+  }
 
+  .hover-image {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the .well box */
+    left: 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  .well-wrapper .trigger:hover + .hover-image {
+    display: block;
+  }
+
+  .well-wrapper .well p {
+    cursor: pointer;
+  }
+</style>
 
 
 </head>
@@ -92,60 +116,62 @@
 
   </div>
   <div id="newsid" class="col-sm-4">
-	
-<div class="well">
-<h4>News</h4>
-Octorber, 2025
-<p><em>CUHK-City U Joint Symposium on G4 Biology/ Chemistry</em></p>
+	  
+<div class="well-wrapper">	
+	<div class="well">
+		<h4>News</h4>
+		Octorber, 2025
+		<p class="trigger"><em>CUHK-City U Joint Symposium on G4 Biology/ Chemistry</em></p>
+		<img class="hover-image" src="./pic/2025kit/1.jpg" alt="Symposium Image">
 
-June, 2025
-<p><em>Prof. Huating and Xiaona gave talks at EORS meeting in Davos</em></p>
-	
-June, 2025
-<p><em>Congratulations to Dr. Li Chuhan and Dr. Yang Feng!</em></p>
-
-June, 2025
-<p><em>Congratulations to Fu Yang presenting in ISSCR!</em></p>
-
-June, 2025
-<p><em>Prof. Huating gave a talk at GRC Myogenesis in Italy!</em></p>
-
-<!--June, 2025
-<style>
-	.hover_img a {
-		margin: 0 auto;
-		position: relative;
-	}
-	.hover_img a span {
-		positon: absolute;
-		display: none;
-		z-index: 99
-	}
-	.hover_img a:hover span {
-		display: block;
-	}
-	.italy {
-		height: auto;
-		width: auto;
-		max-width: 1280px;
-		max-height: 980px;
-	}
-</style>	
-<p><em><div class="hover_img">
-	<a href="#">Conference in Italy!<span><img src="./pic/bench/Image_20250716175025.jpg" alt="image" class="italy" /></span></a>
-	</div.></em></p>-->
-
-May, 2025
-<p><em>Chuhan and Feng's paper is accepted by Nature Communication!</em></p>
-
-May, 2025
-<p><em>Welcome new team member: Quinn Zhang and Bonan Zhang!</em></p>
-
-<!--May, 2025
-<p><em>Congratulations to Yulong, a baby girl!</em></p>-->
-
-
-<h4><a href="https://cuhkwanglab.github.io/news.html">... see all News</a></h4>
+		June, 2025
+		<p><em>Prof. Huating and Xiaona gave talks at EORS meeting in Davos</em></p>
+			
+		June, 2025
+		<p><em>Congratulations to Dr. Li Chuhan and Dr. Yang Feng!</em></p>
+		
+		June, 2025
+		<p><em>Congratulations to Fu Yang presenting in ISSCR!</em></p>
+		
+		June, 2025
+		<p><em>Prof. Huating gave a talk at GRC Myogenesis in Italy!</em></p>
+		
+		<!--June, 2025
+		<style>
+			.hover_img a {
+				margin: 0 auto;
+				position: relative;
+			}
+			.hover_img a span {
+				positon: absolute;
+				display: none;
+				z-index: 99
+			}
+			.hover_img a:hover span {
+				display: block;
+			}
+			.italy {
+				height: auto;
+				width: auto;
+				max-width: 1280px;
+				max-height: 980px;
+			}
+		</style>	
+		<p><em><div class="hover_img">
+			<a href="#">Conference in Italy!<span><img src="./pic/bench/Image_20250716175025.jpg" alt="image" class="italy" /></span></a>
+			</div.></em></p>-->
+		
+		May, 2025
+		<p><em>Chuhan and Feng's paper is accepted by Nature Communication!</em></p>
+		
+		May, 2025
+		<p><em>Welcome new team member: Quinn Zhang and Bonan Zhang!</em></p>
+		
+		<!--May, 2025
+		<p><em>Congratulations to Yulong, a baby girl!</em></p>-->
+		
+		
+		<h4><a href="https://cuhkwanglab.github.io/news.html">... see all News</a></h4>
     
     </div>
   </div>
