@@ -17,13 +17,14 @@
 
   .hover-image {
     display: none;
-    position: absolute;
-    top: 100%; /* Position below the .well box */
-    left: 0;
-    width: 300px;
+    position: fixed;
+    top: 50%; /* Position below the .well box */
+    left: 50%;
+	transform: translate(-50%, -50%);
+    width: 800px;
     border: 1px solid #ccc;
     background-color: #fff;
-    z-index: 10;
+    z-index: 1000;
   }
 
   .well-wrapper .trigger:hover + .hover-image {
