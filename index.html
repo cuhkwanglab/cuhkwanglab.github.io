@@ -27,9 +27,9 @@
     z-index: 1000;
   }
 
-  .well-wrapper .trigger:hover + .hover-image {
+/*  .well-wrapper .trigger:hover + .hover-image {
     display: block;
-  }
+  }-->*/
 
   .well-wrapper .trigger {
     cursor: pointer;
@@ -125,7 +125,8 @@
     <p><em>Prof. Huating Wang and her team gave talks at The 10th National Symposium on Skeletal Muscle Biology in Yangzhou</em></p>
 
 		Octorber, 2025
-		<p class="trigger"><em>CUHK-City U Joint Symposium on G4 Biology/ Chemistry</em><img class="hover-image" src="./pic/2025kit/1_s.jpg" alt="Symposium Image"></p>
+		<p class="trigger"><em>CUHK-City U Joint Symposium on G4 Biology/ Chemistry</em></p>
+    <img class="hover-image" src="./pic/2025kit/1_s.jpg" alt="Symposium Image">
 		
 		June, 2025
 		<p><em>Prof. Huating Wang and Xiaona gave talks at EORS meeting in Davos</em></p>
@@ -138,31 +139,6 @@
 		
 		June, 2025
 		<p><em>Prof. Huating Wang gave a talk at GRC Myogenesis in Italy!</em></p>
-		
-		<!--June, 2025
-		<style>
-			.hover_img a {
-				margin: 0 auto;
-				position: relative;
-			}
-			.hover_img a span {
-				positon: absolute;
-				display: none;
-				z-index: 99
-			}
-			.hover_img a:hover span {
-				display: block;
-			}
-			.italy {
-				height: auto;
-				width: auto;
-				max-width: 1280px;
-				max-height: 980px;
-			}
-		</style>	
-		<p><em><div class="hover_img">
-			<a href="#">Conference in Italy!<span><img src="./pic/bench/Image_20250716175025.jpg" alt="image" class="italy" /></span></a>
-			</div.></em></p>-->
 		
 		May, 2025
 		<p><em>Chuhan and Feng's paper is accepted by Nature Communication!</em></p>
@@ -206,9 +182,21 @@
 
 <script src="./Huating Wang Lab - Home_files/jquery.min.js.下載"></script>
 <script src="./Huating Wang Lab - Home_files/bootstrap.min.js.下載"></script>
+<script>
+  const trigger = document.querySelector('.trigger');
+  const image = document.querySelector('.hover-image');
 
+  trigger.addEventListener('click', () => {
+    image.style.display = image.style.display === 'block' ? 'none' : 'block';
+  });
 
-  
+  // Optional: click outside to close
+  document.addEventListener('click', (e) => {
+    if (!trigger.contains(e.target) && !image.contains(e.target)) {
+      image.style.display = 'none';
+    }
+  });
+</script>
 
-
-</body></html>
+</body>
+</html>
